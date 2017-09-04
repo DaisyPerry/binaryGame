@@ -63,3 +63,17 @@ h1 {
 a {
 	text-decoration:none;
 }
+
+#social {
+  width: 100%;
+  text-align: center;
+  height: 30%;
+  margin-bottom: 5%;
+  margin-top: 5%; 
+}
+
+img#octocat {
+   height: 200px;
+   width: 200px;
+}
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Binary Converter</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="binary.css">
+	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+<div id="numberbox">
+<center>
+
+<section class="binarydigs">
+<center>
+	<div id="binary">
+	<span id="seven"></span>
+	<span id="six"></span>
+	<span id="five"></span>
+	<span id="four"></span>
+	<span id="three"></span>
+	<span id="two"></span>
+	<span id="one"></span>
+	<span id="zero"></span>
+	</div>
+</center>
+</section>
+	<center>
+		<input id="guessbox" type="textbox" name="guess">
+	</center>
+		<div id="btn">
+			<center>
+			<button id="guessbtn">Answer</button>
+			</center>
+		</div>
+</center>
+</div>
+
+<div class="w3-container w3-center w3-animate-opacity">
+	
+<p>stuff</p>
+
+</div>
+	
+</div>
+
+<script type="text/javascript">
+
+	// randomized integer between 1 and 0;//
+	var zero = (Math.floor((Math.random() * 2) + 0));
+
+	//this.randInt converted to string to store binary value for later ref//
+	var zstr = (this.zero).toString();
+
+	// binary first placeholder: 2^0 //
+	var zval = (this.zero * 1);
+	
+	 
+
+	var one = (Math.floor((Math.random() * 2) + 0));
+	var ostr = (this.one).toString();
+	var oval = (this.one * 2);
+
+	var two = (Math.floor((Math.random() * 2) + 0));
+	var tstr = (this.two).toString();
+	var tval = (this.two * 4);
+
+
+	var three = (Math.floor((Math.random() * 2) + 0));
+	var thstr = (this.three).toString();
+	var thval = (this.three * 8);
+	
+
+	var four = (Math.floor((Math.random() * 2) + 0));
+	var fostr = (this.four).toString();
+	var foval = (this.four * 16);
+	
+
+	var five = (Math.floor((Math.random() * 2) + 0));
+	var fistr = (this.five).toString();
+	var fival = (this.five * 32);
+
+
+	var six = (Math.floor((Math.random() * 2) + 0));
+	var sistr = (this.six).toString();
+	var sxval = (this.six * 64);
+
+	var seven = (Math.floor((Math.random() * 2) + 0));
+	var sestr = (this.seven).toString();
+	var seval = (this.seven * 128);
+
+	//full binary number by combining each string//
+	var binary = (sestr + sistr + fistr + fostr + thstr + tstr + ostr + zstr);
+
+	//binary converted to integer by adding each place value//
+	var integerConversion = (zval + oval + tval + thval + foval + fival + sxval + seval);
+		
+	$("#zero").html(zero);
+	$("#one").html(one);
+	$("#two").html(two);
+	$("#three").html(three);
+	$("#four").html(four);
+	$("#five").html(five);
+	$("#six").html(six);
+	$("#seven").html(seven);
+
+
+	$("#guessbtn").on("click", function(){
+		var guess = $("#guessbox").val();
+		
+		if (guess == integerConversion) {
+			
+			alert("CORRECT! " + binary + " = " + integerConversion);
+
+			} else {
+
+			alert("Incorrect, " + binary + " = " + integerConversion);
+			}
+	});
+	
+
+
+	
+
+</script>
+
+</body>
+</html>
